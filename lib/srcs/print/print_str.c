@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   print_str.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 14:03:48 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/20 14:18:55 by rrouille         ###   ########.fr       */
+/*   Created: 2022/11/19 14:44:11 by rrouille          #+#    #+#             */
+/*   Updated: 2022/11/19 14:46:04 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "mylib.h"
 
-# include "mylib.h"
-# include <unistd.h>
-# include <stdbool.h>
+/**
+* @notice	This function prints a string.
+* @param	char_pointer		The string to print.
+* @return	int					The lenght of characters of the printed
+*								string.
+*/
+int	print_str(char *str)
+{
+	int	len;
 
-char	*get_next_line(int fd);
-
-# endif
+	len = 0;
+	if (str == NULL)
+	{
+		ft_putstr_fd("(null)", 1);
+		return (6);
+	}
+	while (str[len])
+		ft_putchar_fd(str[len++], 1);
+	return (len);
+}

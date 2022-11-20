@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 14:03:48 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/20 14:18:55 by rrouille         ###   ########.fr       */
+/*   Created: 2022/09/14 09:28:19 by rrouille          #+#    #+#             */
+/*   Updated: 2022/11/19 13:24:54 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "mylib.h"
 
-# include "mylib.h"
-# include <unistd.h>
-# include <stdbool.h>
-
-char	*get_next_line(int fd);
-
-# endif
+int	ft_find_next_prime(int nb)
+{
+	while (1)
+	{
+		if (ft_is_prime(nb))
+			return (nb);
+		nb++;
+	}
+}

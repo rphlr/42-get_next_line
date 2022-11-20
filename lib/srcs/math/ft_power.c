@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 14:03:48 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/20 14:18:55 by rrouille         ###   ########.fr       */
+/*   Created: 2022/09/13 17:53:11 by rrouille          #+#    #+#             */
+/*   Updated: 2022/11/19 15:02:31 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "mylib.h"
 
-# include "mylib.h"
-# include <unistd.h>
-# include <stdbool.h>
+int	ft_power(int nb, int power)
+{
+	int	nombre;
 
-char	*get_next_line(int fd);
-
-# endif
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	nombre = nb * ft_power(nb, power - 1);
+	return (nombre);
+}

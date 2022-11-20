@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 14:03:48 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/20 14:18:55 by rrouille         ###   ########.fr       */
+/*   Created: 2022/09/13 19:36:51 by rrouille          #+#    #+#             */
+/*   Updated: 2022/11/19 13:24:51 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "mylib.h"
 
-# include "mylib.h"
-# include <unistd.h>
-# include <stdbool.h>
-
-char	*get_next_line(int fd);
-
-# endif
+int	ft_fibonacci(int index)
+{
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+}

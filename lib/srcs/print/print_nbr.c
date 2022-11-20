@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   print_nbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 14:03:48 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/20 14:18:55 by rrouille         ###   ########.fr       */
+/*   Created: 2022/11/19 14:45:27 by rrouille          #+#    #+#             */
+/*   Updated: 2022/11/19 16:46:05 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "mylib.h"
 
-# include "mylib.h"
-# include <unistd.h>
-# include <stdbool.h>
+/**
+* @notice	This function prints a number.
+* @param	int					The number to print.
+* @return	int					The lenght of characters of the printed
+*								number.
+*/
+int	print_nbr(int num)
+{
+	int		len;
+	char	*numchar;
 
-char	*get_next_line(int fd);
-
-# endif
+	len = 0;
+	numchar = ft_itoa(num);
+	len = print_str(numchar);
+	free(numchar);
+	return (len);
+}
