@@ -6,14 +6,14 @@
 #    By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 17:27:55 by rrouille          #+#    #+#              #
-#    Updated: 2022/11/20 14:25:49 by rrouille         ###   ########.fr        #
+#    Updated: 2022/11/20 14:29:42 by rrouille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Folders
 SRCDIR		= srcs
-OBJDIR		= objs/
-HDRDIR		= includes
+OBJDIR		= ../objs/
+HDRDIR		= ../includes
 
 # Files
 SRCS		= ${shell find ${SRCDIR} -name '*.c'}
