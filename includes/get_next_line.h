@@ -6,7 +6,7 @@
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:03:48 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/20 14:18:55 by rrouille         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:53:20 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "mylib.h"
 # include <unistd.h>
 # include <stdbool.h>
+# include <fcntl.h>
 
 char	*get_next_line(int fd);
 

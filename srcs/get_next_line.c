@@ -6,7 +6,7 @@
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:07:36 by rrouille          #+#    #+#             */
-/*   Updated: 2022/11/16 18:20:17 by rrouille         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:53:03 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 */
 
 #include "get_next_line.h"
-#include <fcntl.h>
 
 /**
 * @notice	This function is using read() to add characters by characters to
