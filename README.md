@@ -8,7 +8,9 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rphlr/42-get_next_line?color=green&logo=github&logoColor=green&style=flat-square">
 </p>
 
----
+<div align="center" style="text-align:center">
+	<img src="https://raw.githubusercontent.com/rphlr/rphlr/main/imgs/separator.gif" alt="Separator" width ="200">
+</div>
 
 ## 💡 About the project
 
@@ -16,7 +18,9 @@
 
 	This project is not finished yet !
 
----
+<div align="center" style="text-align:center">
+	<img src="https://raw.githubusercontent.com/rphlr/rphlr/main/imgs/separator.gif" alt="Separator" width ="200">
+</div>
 
 # 🛠️ Usage
 
