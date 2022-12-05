@@ -64,6 +64,16 @@ $ make mt
 $ make fclean
 ```
 
+## My GNL project evaluation
+
+<div align="center">
+
+|      Passed ?      |   Note  |
+|--------------------|:-------:|
+| :x:                | ../100  |
+
+</div>
+
 <div align="center" style="text-align:center">
 	<img src="https://raw.githubusercontent.com/rphlr/rphlr/main/imgs/separator.gif" alt="Separator" width ="200">
 </div>
