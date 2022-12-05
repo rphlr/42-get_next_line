@@ -63,3 +63,9 @@ $ make mt
 ```shell
 $ make fclean
 ```
+
+<div align="center" style="text-align:center">
+	<img src="https://raw.githubusercontent.com/rphlr/rphlr/main/imgs/separator.gif" alt="Separator" width ="200">
+</div>
+
+This module was done by [rphlr](https://rphlr.ch).
