@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:07:36 by rrouille          #+#    #+#             */
-/*   Updated: 2022/12/15 17:29:59 by rrouille         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:29:53 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /**
  * @brief	Reads data from the file descriptor into a buffer and appends the
@@ -164,21 +164,21 @@ t_list	*trim_last_list_element(t_list **lst)
  */
 char	*get_next_line(int fd)
 {
-	static t_list	*stash = NULL;
+	static t_list	*stash[4096];
 	char			*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 4095)
 		return (NULL);
 	line = NULL;
-	prepare_stash_from_file(fd, &stash);
-	if (stash == NULL)
+	prepare_stash_from_file(fd, &stash[fd]);
+	if (stash[fd] == NULL)
 		return (NULL);
-	read_line_from_stash(stash, &line);
-	trim_last_list_element(&stash);
+	read_line_from_stash(stash[fd], &line);
+	trim_last_list_element(&stash[fd]);
 	if (line[0] == '\0')
 	{
-		free_stash(stash);
-		stash = NULL;
+		free_stash(stash[fd]);
+		stash[fd] = NULL;
 		free(line);
 		return (NULL);
 	}
