@@ -6,7 +6,7 @@
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:52:32 by rrouille          #+#    #+#             */
-/*   Updated: 2022/12/15 16:59:59 by rrouille         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:34:29 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*trim_last_list_element_helper(t_list *last, int i)
  * 			in the last element of the list.
  * @param	t_list	*stash : A pointer to the first element in the linked list.
  */
-bool	found_newline(t_list *stash)
+bool	found_new_line(t_list *stash)
 {
 	int		i;
 
