@@ -6,7 +6,7 @@
 /*   By: rrouille <rrouille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:07:36 by rrouille          #+#    #+#             */
-/*   Updated: 2022/12/15 17:29:53 by rrouille         ###   ########.fr       */
+/*   Updated: 2022/12/17 15:10:57 by rrouille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	prepare_stash_from_file(int fd, t_list **stash)
 	int		num_bytes;
 
 	num_bytes = 1;
+	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	while (!found_new_line(*stash) && num_bytes != 0)
 	{
-		buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 		if (buffer == NULL)
 			return ;
 		num_bytes = read(fd, buffer, BUFFER_SIZE);
@@ -43,8 +43,8 @@ void	prepare_stash_from_file(int fd, t_list **stash)
 		}
 		buffer[num_bytes] = '\0';
 		append_buffer_to_stash(stash, buffer, num_bytes);
-		free(buffer);
 	}
+	free(buffer);
 }
 
 /**
